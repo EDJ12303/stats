@@ -50,9 +50,9 @@ cleanFICORange[0:5]
 
 type(cleanFICORange[0:5].values[0])
 
-loansData['FICO.Score'] = cleanFICORange
+loansData['FICO.Score'] = cleanFICORange.values[0][0]
 loansData['FICO.Score'][0:5]
-loansData['FICO.Score'][0:5].values[0][0]
+loansData['FICO.Score'][0:5]
 
 
 a = pd.scatter_matrix(loansData, alpha=0.05, figsize=(10,10), diagonal='hist')
@@ -60,6 +60,7 @@ a = pd.scatter_matrix(loansData, alpha=0.05, figsize=(10,10), diagonal='hist')
 import numpy as np
 import pandas as pd
 import statsmodels.api as sm
+
 
 intrate = loansData['Interest.Rate']
 loanamt = loansData['Amount.Requested']
