@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Feb 14 21:28:10 2016
+
+@author: Erin
+"""
+
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.mlab as mlab
+
+mean = 0
+variance = 1
+sigma = np.sqrt(variance) # this is the standard deviation
+x = np.linspace(-3,3,100)
+plt.plot(x, mlab.normpdf(x,mean,sigma))
+
+plt.show()
